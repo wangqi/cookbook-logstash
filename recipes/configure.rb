@@ -7,6 +7,6 @@ script "config_init" do
   EOH
 end
 
-service 'mongos' do
+service 'logstash' do
   action [:enable, :start]
 end
