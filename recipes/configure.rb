@@ -3,7 +3,7 @@ script "config_init" do
   user "root"
   cwd "/tmp"
   code <<-EOH
-	sed -i 's|LS_HEAP_SIZE="500m"|LS_HEAP_SIZE="<%= node[:logstash][:javaheap] %>"|' /etc/init/logstash
+	sed -i 's|LS_HEAP_SIZE="500m"|LS_HEAP_SIZE="<%= node[:logstash][:javaheap] %>"|' /etc/init.d/logstash
   EOH
 end
 
